@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuadraticJS</title>
+    <link href="sty.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="bg"></div>
+    <h2 class="text-center">QUADRATIC & CUBIC SOLUTIONS</h2>
+    <main> 
+        <div class="container">
+            <form>
+                <label>Number of Variables (roots): </label>
+                <select required>
+                    <option value="quadratic">2 (Quadratic)</option>
+                    <option value="cubic">3 (Cubic)</option>
+                </select><br>
+                <label>No. of Decimal Place (result): </label>
+                <select required>
+                    <option value="0">0 d.p (e.g. 10)</option>
+                    <option selected value="1">1 d.p (e.g. 10.5)</option>
+                    <option value="2">2 d.p (e.g. 10.51)</option>
+                    <option value="3">3 d.p (e.g. 10.512)</option>
+                    <option value="4">4 d.p (e.g. 10.5123)</option>
+                    <option value="5">5 d.p (e.g. 10.51234)</option>
+                </select><br>
+                <input class="btn" type="submit" value="Enter"/>
+            </form>
+        </div>
+        <hr/>
+        <div class="container">
+            <form class="qform">
+                <div>
+                    <div class="question">
+                        <span></span>
+                        <div></div>
+                    </div>
+                    <div class="result">
+                    </div>
+                </div>
+                <div class="controls"></div>
+            </form>
+        </div>        
+    </main>
+    <script src="scr.js"></script>
+</body>
+</html>
