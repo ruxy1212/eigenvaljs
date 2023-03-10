@@ -37,13 +37,17 @@ qform.addEventListener('submit', function(e){
         var resQ = '';
         for(var i=0; i<res.length; i++){
             val = res[i].toFixed(nDec);
-            if(val == 0){
-                resQ += 'λ';
-            }else{
+            if(val != 0){
                 var vol = val*(-1);
                 resQ += (val>0)?`(λ${vol})` : `(λ+${vol})`;
             }
             resR += `<i><b>Root ${i+1}:</b> ${val}</i><br>`;
+        }
+        for(var i=0; i<res.length; i++){
+            val = res[i].toFixed(nDec);
+            if(val == 0){
+                resQ = 'λ'+resQ;
+            }
         }
         resQ += ' = 0';
         result.innerHTML = `<h3>RESULT</h3><div><h4>Type:&emsp;</h4><span class="flet">${resT}</span></div><div><h4>Equation:&emsp;</h4><span>${resE}</span></div><div><i>${resQ}</i></div><div><div><h4>Roots:&emsp;</h4><span>${resR}</span></div></div>`;
