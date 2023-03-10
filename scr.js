@@ -29,7 +29,7 @@ qform.addEventListener('submit', function(e){
     var res = solve(w,x,y,z);
 
     if(res.length>0){
-        res.sort(function(a,b){return a-b});
+        res.sort(function(a,b){return b-a});
         w=(w==1)?'':w;x=(x==1)?'':x;y=(y==1)?'':y;z=(z==1)?'':z;
         var resT = rinput[0].value;
         var resE = (resT == 'cubic') ? `<i><b>${w}</b>λ<sup>3</sup> + <b>${x}</b>λ<sup>2</sup> + <b>${y}</b>λ + <b>${z}</b> = 0</i>` : `<i><b>${x}</b>λ<sup>2</sup> + <b>${y}</b>λ + <b>${z}</b> = 0</i>`;
