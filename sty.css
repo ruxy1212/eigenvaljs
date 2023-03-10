@@ -30,6 +30,7 @@ main{
 .container{
     width: 500px;
     max-width: 88%;
+    box-sizing: border-box;
     background: rgba(240, 236, 236, 0.884);
     padding: 20px;
     margin: 0 auto;
@@ -108,4 +109,23 @@ hr {
     .qform > div:first-child .question, .qform > div:first-child .result{
         width: 100%;
     }
+}
+aside{
+    width: 600px;
+    max-width: 88%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: #ffffffb3;
+    padding: 30px;
+    border-radius: 8px;
+    border: 5px solid #ffffff52;
+}
+aside a, aside p, aside span{
+    margin-left: 15px;
+    line-height: 1.5;
+    color: rgb(17,17,17);
+    text-decoration: none;
+}
+aside a:hover{
+    color: rgb(50,50,50);
 }
