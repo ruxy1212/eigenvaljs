@@ -111,6 +111,7 @@ hr {
     }
 }
 aside{
+    display: none;
     width: 600px;
     max-width: 88%;
     box-sizing: border-box;
@@ -119,6 +120,7 @@ aside{
     padding: 30px;
     border-radius: 8px;
     border: 5px solid #ffffff52;
+    position: relative;
 }
 aside a, aside p, aside span{
     margin-left: 15px;
@@ -128,4 +130,35 @@ aside a, aside p, aside span{
 }
 aside a:hover{
     color: rgb(50,50,50);
+}
+aside div{
+    background-color: #f55;
+    border-radius: 50%;
+    box-shadow: 1px 1px 4px #888;
+    font-weight: bold;
+    padding: 8px 8px;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    font-size: xx-large;
+    color: white;
+    line-height: 0.6;
+    cursor: pointer;
+}
+.open-cd{
+    background-color: blue;
+    border-radius: 50%;
+    box-shadow: 1px 1px 4px #888;
+    font-weight: bold;
+    padding: 8px 8px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    font-size: xx-large;
+    color: white;
+    line-height: 0.6;
+    cursor: pointer;
+}
+aside div:hover, .open-cd:hover{
+    color: rgb(126, 126, 126);
 }

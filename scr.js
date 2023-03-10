@@ -68,11 +68,7 @@ function solve(a,b,c,d){
         else if (D > 0) return [(-b+Math.sqrt(D))/(2*a), (-b-Math.sqrt(D))/(2*a)];
         return [];
     }
-
-    var p = (3*a*c - b*b)/(3*a*a),
-    q = (2*b*b*b - 9*a*b*c + 27*a*a*d)/(27*a*a*a),
-    roots;
-
+    var p = (3*a*c - b*b)/(3*a*a), q = (2*b*b*b - 9*a*b*c + 27*a*a*d)/(27*a*a*a), roots;
     if(Math.abs(p) < 1e-8) roots = [root(-q)];
     else if(Math.abs(q) < 1e-8) roots = [0].concat(p < 0 ? [Math.sqrt(-p), -Math.sqrt(-p)] : []);
     else {
@@ -88,7 +84,6 @@ function solve(a,b,c,d){
             roots = [u*Math.cos(t), u*Math.cos(t-k), u*Math.cos(t-2*k)];
         }
     }
-
     for(var i=0; i<roots.length; i++) roots[i] -= b/(3*a);
 
     return roots;
@@ -96,6 +91,25 @@ function solve(a,b,c,d){
 function resetForm(){
     qform.reset();
 }
+function openCD(){
+    document.querySelector('main').style.display = "none";
+    document.querySelector('aside').style.display = "block";
+    document.querySelector('.open-cd').style.opacity = 0.3;
+    document.querySelector('.open-cd').style.pointerEvents = "none";
+}
+
+function hideCD(){
+    document.querySelector('main').style.display = "block";
+    document.querySelector('aside').style.display = "none";
+    document.querySelector('.open-cd').style.opacity = 1;
+    document.querySelector('.open-cd').style.pointerEvents = "unset";
+}
+
+document.addEventListener('mouseup', function (e) { 
+    var con = document.querySelector('aside');
+    var extbtn = document.querySelector('aside div');
+    if(!con.contains(e.target) && !extbtn.contains(e.target)) hideCD();
+});
 
 // var ans = solve(1,-11,36,-36);
 // var ans = solve(0,1,12,32)
